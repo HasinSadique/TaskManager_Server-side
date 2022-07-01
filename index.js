@@ -67,7 +67,7 @@ async function run() {
             const filter = { _id: ObjectId(id) };
             const updateTask = {
                 $set: {
-                    isComplete: true,
+                    TaskTitle: TaskTitle,
                 },
             };
             const result = await tasksToDoCollection.updateOne(filter, updateTask);
